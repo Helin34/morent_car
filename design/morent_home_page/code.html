@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-tint":"#1d52d8","tertiary-fixed":"#ffdad3","surface-container-low":"#f1f3ff","outline":"#747686","on-error-container":"#93000a","primary-fixed-dim":"#b6c4ff","tertiary":"#aa1900","surface-container":"#e8eeff","on-secondary":"#ffffff","on-surface":"#161c27","on-primary":"#ffffff","surface-variant":"#dde2f3","surface-dim":"#d4daea","on-primary-container":"#f0f1ff","tertiary-fixed-dim":"#ffb4a5","surface-container-highest":"#dde2f3","primary-fixed":"#dce1ff","inverse-surface":"#2a303d","inverse-on-surface":"#ecf0ff","on-tertiary-fixed-variant":"#8e1300","secondary-container":"#55a7ff","inverse-primary":"#b6c4ff","on-secondary-fixed-variant":"#004880","secondary":"#0060a8","on-tertiary-container":"#ffefeb","outline-variant":"#c4c5d7","surface-bright":"#f9f9ff","surface-container-high":"#e3e8f9","on-tertiary-fixed":"#3e0400","on-background":"#161c27","secondary-fixed":"#d3e4ff","on-secondary-container":"#003b6a","secondary-fixed-dim":"#a1c9ff","primary":"#0848d0","on-surface-variant":"#434654","primary-container":"#3563e9","surface-container-lowest":"#ffffff","on-error":"#ffffff","surface":"#f9f9ff","on-primary-fixed-variant":"#003ab1","tertiary-container":"#d62504","on-tertiary":"#ffffff","on-primary-fixed":"#00164f","error-container":"#ffdad6","background":"#f9f9ff","error":"#ba1a1a","on-secondary-fixed":"#001c38"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"2rem","space-xs":"0.25rem","space-lg":"1.5rem",margin:"2rem","margin-mobile":"1rem","space-md":"1rem","space-sm":"0.5rem","gutter-mobile":"1rem",gutter:"1.5rem"},fontFamily:{"spec-code":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"]},fontSize:{"spec-code":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"700"}],"headline-xl-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"display-hero-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-md":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-lg":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"700"}],"display-hero":["40px",{lineHeight:"48px",letterSpacing:"-0.03em",fontWeight:"700"}],"label-md":["14px",{lineHeight:"20px",fontWeight:"600"}],"label-sm":["12px",{lineHeight:"16px",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg shrink-0"><a class="flex items-center gap-space-sm" href="#"><img alt="Morent Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDWeKIajgqQRKxRVGawNAaQly3wt_ON2CbuoXjJxkeX8iqEUmcOZ4cgzG57IMAn015JIi9NIgnWW7a8YQ0AlJdoOL0mMBv0b44EBYJ_XJHrfSXCq8ZYzgDyMgUgikIWxEAsak6WNxKhhV8U6qgvJzMbZJkgMTuYyyvMEoaxY5OHkY5pcq1KAErRudOPNY0UIVKFqEM8tWV5qlffup9m0GIpz1hFTjnYb0HJ5CwQclA"/><span class="font-headline-lg text-headline-lg text-primary tracking-tight">MORENT</span></a></div><div class="flex-1 max-w-xl mx-auto hidden lg:flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-low"><span class="material-symbols-outlined text-outline">search</span><input class="w-full bg-transparent border-0 outline-none text-on-surface placeholder:text-outline font-body-md text-body-md" placeholder="Search something here" type="text"/><button class="p-1.5 rounded-full hover:bg-surface-container text-outline hover:text-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button></div><nav class="hidden xl:flex items-center gap-space-md shrink-0" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-lg px-3 py-1.5"><a aria-current="page" class="transition-colors bg-primary-container text-on-primary-container font-label-md rounded-lg px-3 py-1.5" data-path="home" href="#">Home</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-3 py-1.5 transition-colors" data-path="cars-catalog" href="#">Cars Catalog</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-3 py-1.5 transition-colors" data-path="rental-deals" href="#">Rental Deals</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-3 py-1.5 transition-colors" data-path="about" href="#">About</a></nav><div class="flex items-center gap-space-sm shrink-0"><button aria-label="Favorites" class="relative w-10 h-10 rounded-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">favorite</span><span class="absolute top-1 right-1 w-2.5 h-2.5 bg-primary rounded-full"></span></button><button aria-label="Notifications" class="relative w-10 h-10 rounded-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2.5 h-2.5 bg-tertiary rounded-full"></span></button><button aria-label="Settings" class="w-10 h-10 rounded-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button><div class="flex items-center gap-space-xs pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABiTL1lrKEzpRItF6mhdQOLS5p9WKFuiLbYzr19mfZu0QdVQfoMlLe3JosxSjZ7UP0wUG-z_4uDzm-l7w19vH10hkJQhtgF4w2OCos8hJpcv-zW4dwVrHqG-BGbz8s5mNp8-khYKdA10nbr0CbxkZVL78tfFxNzy0eUl2GeIUue_ePTecvtEC4K0SNZM4nTjtdHVRpVVGUmWWCbmxvxsUf-pzLK35-Ug-P_RiY1SI"/><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full px-margin-mobile md:px-margin max-w-[1440px] mx-auto py-space-md md:py-space-lg flex flex-col gap-space-xl">
+<!-- 1. Hero Dual Promotional Cards -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg w-full">
+<!-- Promotional Card 1: Electric Blue -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary-container via-surface-tint to-primary text-on-primary p-space-lg md:p-space-xl shadow-lg flex flex-col justify-between min-h-[360px] group">
+<!-- Abstract Architectural Fluid Accent -->
+<svg class="absolute -right-16 -bottom-20 w-96 h-96 opacity-15 pointer-events-none transform rotate-12 transition-transform duration-700 group-hover:scale-105" fill="none" viewbox="0 0 400 400">
+<circle cx="200" cy="200" r="180" stroke="currentColor" stroke-dasharray="24 16" stroke-width="32"></circle>
+<circle cx="200" cy="200" r="120" stroke="currentColor" stroke-width="16"></circle>
+<circle cx="200" cy="200" fill="currentColor" r="60"></circle>
+</svg>
+<div class="relative z-10 max-w-sm flex flex-col gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-spec-code font-spec-code uppercase tracking-wider text-on-primary w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+            Premium Experience
+          </span>
+<h1 class="font-headline-xl text-headline-xl text-on-primary leading-tight tracking-tight mt-1">
+            The Best Platform for Car Rental
+          </h1>
+<p class="font-body-md text-body-md text-on-primary/80 mt-1">
+            Ease of doing a car rental safely and reliably. Experience world-class transparency and low rates.
+          </p>
+<div class="mt-4">
+<a class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-inverse-surface hover:bg-on-surface text-inverse-on-surface font-label-md text-label-md shadow-md transition-all duration-200 hover:shadow-xl active:scale-95" data-path="cars-catalog" href="#">
+              Rental Car
+            </a>
+</div>
+</div>
+<div class="relative z-10 mt-6 flex justify-end items-end h-36 md:h-44">
+<img class="max-h-full w-auto object-contain object-right-bottom drop-shadow-[0_20px_25px_rgba(0,0,0,0.35)] transform transition-transform duration-500 group-hover:scale-105" data-alt="Modern high-performance sports car with sleek metallic white and chrome body angled side view on transparent studio background, sharp reflections, clean cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMeKte7Eph1u55Q8ZuLnWD2wty_F8vDGlhERhJBxJu08dSMaC1XZBVWaNfewuvfWDYSWd77TUXJDI53fUiAd0jU2au5tdpBu6ktAe63bOEOuHMMCjoDQAPFzDydHeWAWBi7miPg5TJPCuoG02neE_iHx90cRlO3mUe_pFyBe3sRhWZKqRdZ_HzQH4uk5FvD0CnZWw61LWn1nX9vY68UDCbiuzAl8RtlWB_MfhUzrk"/>
+</div>
+</div>
+<!-- Promotional Card 2: Deep Slate / Tech Dark -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-inverse-surface via-[#1b2230] to-[#0e131d] text-inverse-on-surface p-space-lg md:p-space-xl shadow-lg flex flex-col justify-between min-h-[360px] group">
+<!-- Abstract Contour Lines -->
+<svg class="absolute -right-20 -top-24 w-96 h-96 opacity-10 pointer-events-none transform -rotate-45" fill="none" viewbox="0 0 400 400">
+<rect height="300" rx="40" stroke="currentColor" stroke-width="24" width="300" x="50" y="50"></rect>
+<rect height="200" rx="28" stroke="currentColor" stroke-width="16" width="200" x="100" y="100"></rect>
+<circle cx="200" cy="200" fill="currentColor" r="48"></circle>
+</svg>
+<div class="relative z-10 max-w-sm flex flex-col gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/20 backdrop-blur-md text-spec-code font-spec-code uppercase tracking-wider text-secondary-container w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+            Seamless Mobility
+          </span>
+<h2 class="font-headline-xl text-headline-xl text-inverse-on-surface leading-tight tracking-tight mt-1">
+            Easy way to rent a car at a low price
+          </h2>
+<p class="font-body-md text-body-md text-inverse-on-surface/80 mt-1">
+            Providing affordable car rental services and safe, comfortable facilities for every trip.
+          </p>
+<div class="mt-4">
+<a class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary font-label-md text-label-md shadow-md transition-all duration-200 hover:shadow-xl active:scale-95" data-path="cars-catalog" href="#">
+              Rental Car
+            </a>
+</div>
+</div>
+<div class="relative z-10 mt-6 flex justify-end items-end h-36 md:h-44">
+<img class="max-h-full w-auto object-contain object-right-bottom drop-shadow-[0_20px_25px_rgba(0,0,0,0.5)] transform transition-transform duration-500 group-hover:scale-105" data-alt="Luxury midnight blue full-size SUV crossover side profile against pure transparent background, sleek aerodynamics, clean rim detail, photorealistic reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA853EdBLRuUlOiJ_mGJ3P4lW3BzYJtiVusakEL9OG8lnkUyQuMaCqHd53_k1Ke-WUlt6ZXoQXjMERlgQg9fO8gS8iz8GQbTp86hxfjoCmAzTu5Ehi3cxQfbd_3vi_nG4Ot-oWjCQlrGBjvrrQC2zvrQ-WIs-UCa4hvTgPLT1isT0M15a-bm3UbptI5ivneoYZ0cJiIPgGrb0c8k_1HlO2ImBjpnqn89OkQ0nqQ-tE"/>
+</div>
+</div>
+</section>
+<!-- 2. Interactive Booking Selector (Pick-up & Drop-off Widget) -->
+<section class="relative w-full" id="booking-widget">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md lg:gap-space-xl items-center relative">
+<!-- Pick-Up Card Panel -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-space-sm mb-space-md">
+<span class="relative flex h-4 w-4 items-center justify-center">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-30"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Pick - Up</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<!-- Locations Dropdown -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="pickup-loc">Locations</label>
+<div class="relative bg-surface-container-low rounded-lg px-3 py-2.5 flex items-center justify-between cursor-pointer group hover:bg-surface-container transition-colors">
+<select class="w-full bg-transparent border-0 outline-none font-body-sm text-body-sm text-on-surface-variant font-medium appearance-none cursor-pointer pr-4" id="pickup-loc">
+<option selected="" value="semarang">Semarang</option>
+<option value="jakarta">Jakarta</option>
+<option value="surabaya">Surabaya</option>
+<option value="denpasar">Denpasar (Bali)</option>
+<option value="bandung">Bandung</option>
+</select>
+<span class="material-symbols-outlined text-outline text-[18px] pointer-events-none group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+<!-- Date Picker -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="pickup-date">Date</label>
+<div class="relative bg-surface-container-low rounded-lg px-3 py-2.5 flex items-center justify-between cursor-pointer group hover:bg-surface-container transition-colors">
+<input class="w-full bg-transparent border-0 outline-none font-body-sm text-body-sm text-on-surface-variant font-medium cursor-pointer" id="pickup-date" type="date" value="2024-07-20"/>
+</div>
+</div>
+<!-- Time Picker -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="pickup-time">Time</label>
+<div class="relative bg-surface-container-low rounded-lg px-3 py-2.5 flex items-center justify-between cursor-pointer group hover:bg-surface-container transition-colors">
+<select class="w-full bg-transparent border-0 outline-none font-body-sm text-body-sm text-on-surface-variant font-medium appearance-none cursor-pointer pr-4" id="pickup-time">
+<option value="07:00">07:00 AM</option>
+<option selected="" value="09:00">09:00 AM</option>
+<option value="12:00">12:00 PM</option>
+<option value="15:00">03:00 PM</option>
+<option value="18:00">06:00 PM</option>
+</select>
+<span class="material-symbols-outlined text-outline text-[18px] pointer-events-none group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Central Floating Reverse / Swap Button -->
+<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden lg:flex items-center justify-center">
+<button aria-label="Swap Pick-up and Drop-off values" class="w-14 h-14 rounded-xl bg-primary hover:bg-primary-container text-on-primary shadow-xl hover:shadow-2xl hover:scale-110 active:scale-95 transition-all flex items-center justify-center" id="swap-locations-btn" type="button">
+<span class="material-symbols-outlined text-[24px]">swap_vert</span>
+</button>
+</div>
+<!-- Drop-Off Card Panel -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-space-sm mb-space-md">
+<span class="relative flex h-4 w-4 items-center justify-center">
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Drop - Off</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<!-- Locations Dropdown -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="dropoff-loc">Locations</label>
+<div class="relative bg-surface-container-low rounded-lg px-3 py-2.5 flex items-center justify-between cursor-pointer group hover:bg-surface-container transition-colors">
+<select class="w-full bg-transparent border-0 outline-none font-body-sm text-body-sm text-on-surface-variant font-medium appearance-none cursor-pointer pr-4" id="dropoff-loc">
+<option value="semarang">Semarang</option>
+<option selected="" value="jakarta">Jakarta</option>
+<option value="surabaya">Surabaya</option>
+<option value="denpasar">Denpasar (Bali)</option>
+<option value="bandung">Bandung</option>
+</select>
+<span class="material-symbols-outlined text-outline text-[18px] pointer-events-none group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+<!-- Date Picker -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="dropoff-date">Date</label>
+<div class="relative bg-surface-container-low rounded-lg px-3 py-2.5 flex items-center justify-between cursor-pointer group hover:bg-surface-container transition-colors">
+<input class="w-full bg-transparent border-0 outline-none font-body-sm text-body-sm text-on-surface-variant font-medium cursor-pointer" id="dropoff-date" type="date" value="2024-07-23"/>
+</div>
+</div>
+<!-- Time Picker -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="dropoff-time">Time</label>
+<div class="relative bg-surface-container-low rounded-lg px-3 py-2.5 flex items-center justify-between cursor-pointer group hover:bg-surface-container transition-colors">
+<select class="w-full bg-transparent border-0 outline-none font-body-sm text-body-sm text-on-surface-variant font-medium appearance-none cursor-pointer pr-4" id="dropoff-time">
+<option value="07:00">07:00 AM</option>
+<option value="09:00">09:00 AM</option>
+<option value="12:00">12:00 PM</option>
+<option value="15:00">03:00 PM</option>
+<option selected="" value="18:00">06:00 PM</option>
+</select>
+<span class="material-symbols-outlined text-outline text-[18px] pointer-events-none group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Popular Cars Section -->
+<section class="flex flex-col gap-space-lg w-full">
+<div class="flex items-center justify-between w-full">
+<div class="flex items-baseline gap-space-sm">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Popular Car</h2>
+<span class="hidden sm:inline-block font-label-sm text-label-sm text-outline font-semibold uppercase tracking-wider">Top Tier Fleets</span>
+</div>
+<a class="group flex items-center gap-1 font-label-md text-label-md text-primary font-semibold hover:text-primary-container transition-colors" data-path="cars-catalog" href="#">
+          View All
+          <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- 4 Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Car 1: Koenigsegg -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold group-hover:text-primary transition-colors">Koenigsegg</h3>
+<p class="font-label-sm text-label-sm text-outline font-medium">Sport</p>
+</div>
+<button aria-label="Add to wishlist" class="wishlist-btn text-tertiary transition-transform active:scale-125" onclick="this.classList.toggle('text-tertiary'); this.classList.toggle('text-outline');" type="button">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="my-space-lg h-36 flex items-center justify-center relative overflow-hidden">
+<img class="max-h-full w-full object-contain transform group-hover:scale-105 transition-transform duration-300" data-alt="Exotic matte black sports coupe supercar side dynamic profile with gloss yellow calipers on crisp pure transparent background, sharp modern reflection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtrvq0R4C0nWn3JPted8Xs7wJ8RB_udeURVSxIZLhKeiQI4BBv3l7jmdhaBe9IW8J6dk8dqTs38QEVT8ME55BHekDVM3xthHf1aUp0w0DcTF2Jgb79wyJOJcpQmmJL8zI_Ou3TlRh_AAZcEPx1wJHZ_rmuqqpt-EVuMzPYuRWzwHCCaIFhFj6dUbFnik5reVFjVWSUINYuJMlrPHngNEUJb9dn6efO02qFeZKPo7U"/>
+</div>
+<div class="flex items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-space-lg">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">local_gas_station</span> 90L</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">settings</span> Manual</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">group</span> 2 People</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex flex-col">
+<div class="flex items-baseline">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">$99.00</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">/ day</span>
+</div>
+</div>
+<a class="px-5 py-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary font-label-md text-label-md font-semibold transition-all duration-200 active:scale-95 shadow-sm" data-path="cars-catalog" href="#">
+              Rent Now
+            </a>
+</div>
+</article>
+<!-- Car 2: Nissan GT - R -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold group-hover:text-primary transition-colors">Nissan GT - R</h3>
+<p class="font-label-sm text-label-sm text-outline font-medium">Sport</p>
+</div>
+<button aria-label="Add to wishlist" class="wishlist-btn text-outline hover:text-tertiary transition-transform active:scale-125" onclick="this.classList.toggle('text-tertiary'); this.classList.toggle('text-outline');" type="button">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+</button>
+</div>
+<div class="my-space-lg h-36 flex items-center justify-center relative overflow-hidden">
+<img class="max-h-full w-full object-contain transform group-hover:scale-105 transition-transform duration-300" data-alt="Metallic pearl white sports coupe with aerodynamic carbon rear wing side view on isolated clean surface, premium automotive photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC34t9WOtU-_jyn-sxa2i2KDIKugiCQ-O9Gen2VgqTVxKzajFDtVpbys2eTLrB7lZmF4YYT5Sf2cLQPKtVy4RC7XqXdvxnoqo848PVW5g_h5u5JX6CZauakq4CQMmje5ISEehjGKpFqJH6ClggBCPICQOnXkABuUUGvJMMq-XIc24T7jVj5yHx4w257iMNnTtMGnhG3CoqzVBOnn-kluCNT2A91uy7ZT8KNsUPxO5k"/>
+</div>
+<div class="flex items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-space-lg">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">local_gas_station</span> 80L</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">settings</span> Manual</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">group</span> 2 People</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex flex-col">
+<div class="flex items-baseline">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">$80.00</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">/ day</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline line-through">$100.00</span>
+</div>
+<a class="px-5 py-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary font-label-md text-label-md font-semibold transition-all duration-200 active:scale-95 shadow-sm" data-path="cars-catalog" href="#">
+              Rent Now
+            </a>
+</div>
+</article>
+<!-- Car 3: Rolls - Royce -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold group-hover:text-primary transition-colors">Rolls - Royce</h3>
+<p class="font-label-sm text-label-sm text-outline font-medium">Sedan</p>
+</div>
+<button aria-label="Add to wishlist" class="wishlist-btn text-tertiary transition-transform active:scale-125" onclick="this.classList.toggle('text-tertiary'); this.classList.toggle('text-outline');" type="button">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="my-space-lg h-36 flex items-center justify-center relative overflow-hidden">
+<img class="max-h-full w-full object-contain transform group-hover:scale-105 transition-transform duration-300" data-alt="Two-tone navy blue and silver ultra luxury flagship sedan car side profile with pristine chrome grill reflection on clear transparent backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4sYZGoN3q_Sr8FEOeP4zYgelJC9eqfqq75i3cn2yFlSG4BieAA8hAWuuuJ1pcYvAb6MxXLxeh6S9JbLo35dagrOsbg4ujERkfjSN2vIMewDeMXvo2KRbDlvNLh4EJRSMKbWqOk5bz_OcnqOCtHL0nxwWDmQaGqzAZUC2DGFg9M5VuYbBs3GA-5Amr_fJeddWrMIzMLvP8YnJ-CyBq8Y3gb6M-vm7y7aPaiwzp29o"/>
+</div>
+<div class="flex items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-space-lg">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">local_gas_station</span> 70L</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">settings</span> Manual</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">group</span> 4 People</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex flex-col">
+<div class="flex items-baseline">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">$96.00</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">/ day</span>
+</div>
+</div>
+<a class="px-5 py-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary font-label-md text-label-md font-semibold transition-all duration-200 active:scale-95 shadow-sm" data-path="cars-catalog" href="#">
+              Rent Now
+            </a>
+</div>
+</article>
+<!-- Car 4: Porsche 911 Carrera -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold group-hover:text-primary transition-colors">Porsche 911 Carrera</h3>
+<p class="font-label-sm text-label-sm text-outline font-medium">Sport</p>
+</div>
+<button aria-label="Add to wishlist" class="wishlist-btn text-outline hover:text-tertiary transition-transform active:scale-125" onclick="this.classList.toggle('text-tertiary'); this.classList.toggle('text-outline');" type="button">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+</button>
+</div>
+<div class="my-space-lg h-36 flex items-center justify-center relative overflow-hidden">
+<img class="max-h-full w-full object-contain transform group-hover:scale-105 transition-transform duration-300" data-alt="Agate grey metallic German rear-engine sports car sleek aerodynamic profile sitting on clear surface with crisp studio lighting highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFm6JLHs4C5fPF9v7YwgW-za4M7X0ve3Hk4R6zaLwqHXou7xRw00VFpGgtycmZco4MJjmNNrBcAuVFBxAA0YFhx7CIR8N9nhV907b3I4QPyeIC5I6jDD1fCKOh0W_gpKfPlkF_q3R8hgcL12HDzFThFy5So5quymhlVNqypzVuE2bzXBV5j_PVAyzzVgExkz-w_hLEhPYcC8s8TV6LGwGO_eNaLHjPbtV406AKYJ8"/>
+</div>
+<div class="flex items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-space-lg">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">local_gas_station</span> 64L</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">settings</span> Electric</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">group</span> 2 People</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex flex-col">
+<div class="flex items-baseline">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">$120.00</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">/ day</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline line-through">$145.00</span>
+</div>
+<a class="px-5 py-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary font-label-md text-label-md font-semibold transition-all duration-200 active:scale-95 shadow-sm" data-path="cars-catalog" href="#">
+              Rent Now
+            </a>
+</div>
+</article>
+</div>
+</section>
+<!-- 4. Recommendation Cars Section -->
+<section class="flex flex-col gap-space-lg w-full">
+<div class="flex items-center justify-between w-full">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Recommendation Car</h2>
+<p class="font-body-sm text-body-sm text-outline">Curated choices suited for personal commutes, business &amp; family trips</p>
+</div>
+</div>
+<!-- 2x4 Grid of 8 Vehicles -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Rec 1: All New Rush -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold group-hover:text-primary transition-colors">All New Rush</h3>
+<p class="font-label-sm text-label-sm text-outline font-medium">SUV</p>
+</div>
+<button aria-label="Add to wishlist" class="wishlist-btn text-outline hover:text-tertiary transition-transform active:scale-125" onclick="this.classList.toggle('text-tertiary'); this.classList.toggle('text-outline');" type="button">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+</button>
+</div>
+<div class="my-space-lg h-36 flex items-center justify-center relative overflow-hidden">
+<img class="max-h-full w-full object-contain transform group-hover:scale-105 transition-transform duration-300" data-alt="Modern dark bronze compact SUV side view with sleek roof rails and elevated road clearance on neutral transparent studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt4uOQzCVMXHoR1o7x_YVzD1ngKycBRY33cGStSauUZqCpqn6seLmvcpXadEC_-Ye5q-QEF09-PRrf4LDBFeG3zDNWy2xK6hIlHTJd_-trPzNA5_to_zbAsUkTBXCV2EzZjEbqbSaEd9bzGjXCB14RdhwvXB8kcKOoT28-myKhaLY-_qKwLHas9vIsWxKQwZ5h9dGwbS_FMmbNxG41OrY_SNsmvn6oi0A0Rvo_Jx0"/>
+</div>
+<div class="flex items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-space-lg">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">local_gas_station</span> 70L</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">settings</span> Manual</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">group</span> 6 People</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex flex-col">
+<div class="flex items-baseline">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">$72.00</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">/ day</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline line-through">$80.00</span>
+</div>
+<a class="px-5 py-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary font-label-md text-label-md font-semibold transition-all duration-200 active:scale-95 shadow-sm" data-path="cars-catalog" href="#">
+              Rent Now
+            </a>
+</div>
+</article>
+<!-- Rec 2: CR - V -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold group-hover:text-primary transition-colors">CR - V</h3>
+<p class="font-label-sm text-label-sm text-outline font-medium">SUV</p>
+</div>
+<button aria-label="Add to wishlist" class="wishlist-btn text-tertiary transition-transform active:scale-125" onclick="this.classList.toggle('text-tertiary'); this.classList.toggle('text-outline');" type="button">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="my-space-lg h-36 flex items-center justify-center relative overflow-hidden">
+<img class="max-h-full w-full object-contain transform group-hover:scale-105 transition-transform duration-300" data-alt="Refined forest green mid-size family SUV side silhouette on transparent background, soft sunlight reflection on metallic curves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq0FCmBLXEEHXIuudbCNN75LOJaVtXYOguCMO3DkNTSIg1FaCInEfpJDfdQAY19nC0gsfq3fv64dsM8icY7sCXWBuWUw3HSZq_T2wpQVgWoop2K7M-8zHIYHiqXfh8ZVSaj-OvWf2-8PrE72Zmj7Lxzqljz_aqGN_mgAC6S7E_PgP8Qa17JedEi6nMutTgaq7_pJ-9FyCZH3W5Vf0SsPqSSvaB682FlVblJP2y1ho"/>
+</div>
+<div class="flex items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-space-lg">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">local_gas_station</span> 80L</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">settings</span> Manual</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">group</span> 6 People</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex flex-col">
+<div class="flex items-baseline">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">$80.00</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">/ day</span>
+</div>
+</div>
+<a class="px-5 py-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary font-label-md text-label-md font-semibold transition-all duration-200 active:scale-95 shadow-sm" data-path="cars-catalog" href="#">
+              Rent Now
+            </a>
+</div>
+</article>
+<!-- Rec 3: All New Terios -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold group-hover:text-primary transition-colors">All New Terios</h3>
+<p class="font-label-sm text-label-sm text-outline font-medium">SUV</p>
+</div>
+<button aria-label="Add to wishlist" class="wishlist-btn text-outline hover:text-tertiary transition-transform active:scale-125" onclick="this.classList.toggle('text-tertiary'); this.classList.toggle('text-outline');" type="button">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+</button>
+</div>
+<div class="my-space-lg h-36 flex items-center justify-center relative overflow-hidden">
+<img class="max-h-full w-full object-contain transform group-hover:scale-105 transition-transform duration-300" data-alt="Polished graphite gray adventure crossover SUV side profile on clean transparent backdrop, high dynamic range rendering" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt_QlSUUDqTOCcF9uF1m8QtVVSqkIpX27XfQkpjMM6_iHUEVrMVpL5rcGzysywPlmevULVErjyD7hN6lI372QvCE0dOlBFDiyY-uHZZb6Rcv3qubn6imoOYGynQPrOdndzynP74jia75qkAnG9l5R8iAWExISN_pMREA6uzGAPofjZ4hOs2UvgsuJEgctcG7m6Sju074YfPTBzulAD5-vpetmKcfBs8KpOuNIwQkE"/>
+</div>
+<div class="flex items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-space-lg">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">local_gas_station</span> 90L</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">settings</span> Manual</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">group</span> 6 People</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex flex-col">
+<div class="flex items-baseline">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">$74.00</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">/ day</span>
+</div>
+</div>
+<a class="px-5 py-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary font-label-md text-label-md font-semibold transition-all duration-200 active:scale-95 shadow-sm" data-path="cars-catalog" href="#">
+              Rent Now
+            </a>
+</div>
+</article>
+<!-- Rec 4: MG ZX Exclusive -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold group-hover:text-primary transition-colors">MG ZX Exclusive</h3>
+<p class="font-label-sm text-label-sm text-outline font-medium">Hatchback</p>
+</div>
+<button aria-label="Add to wishlist" class="wishlist-btn text-tertiary transition-transform active:scale-125" onclick="this.classList.toggle('text-tertiary'); this.classList.toggle('text-outline');" type="button">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="my-space-lg h-36 flex items-center justify-center relative overflow-hidden">
+<img class="max-h-full w-full object-contain transform group-hover:scale-105 transition-transform duration-300" data-alt="Modern crimson red compact hatchback car angled side stance on pure transparent background, sharp glossy body highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-Gz1zpxu8Xbp3YzpI55jKdTeypHNKfLxmd7eP_HRS99UxrPZiNMXpCcSUQrzdSJ8xTgkqz_UDlN464DJ6zwYqblU-lNfi1XKHKfIlwsYQtgyppGQSOwvmDY3LSjfm3Q0oyU6MAfgxw8AeAc5W_CCiXnqH8cQxNC9QsrLBaSaYvyubuCT-l6winkTbX44MzAWlleQuVwDI-grHCweCTlINGSLc8geVv5NjPaPg13M"/>
+</div>
+<div class="flex items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-space-lg">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">local_gas_station</span> 70L</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">settings</span> Manual</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">group</span> 4 People</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex flex-col">
+<div class="flex items-baseline">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">$76.00</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">/ day</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline line-through">$85.00</span>
+</div>
+<a class="px-5 py-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary font-label-md text-label-md font-semibold transition-all duration-200 active:scale-95 shadow-sm" data-path="cars-catalog" href="#">
+              Rent Now
+            </a>
+</div>
+</article>
+<!-- Rec 5: New MG ZS -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold group-hover:text-primary transition-colors">New MG ZS</h3>
+<p class="font-label-sm text-label-sm text-outline font-medium">SUV</p>
+</div>
+<button aria-label="Add to wishlist" class="wishlist-btn text-outline hover:text-tertiary transition-transform active:scale-125" onclick="this.classList.toggle('text-tertiary'); this.classList.toggle('text-outline');" type="button">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+</button>
+</div>
+<div class="my-space-lg h-36 flex items-center justify-center relative overflow-hidden">
+<img class="max-h-full w-full object-contain transform group-hover:scale-105 transition-transform duration-300" data-alt="Metallic silver urban crossover car profile isolated on clean background, alloy wheel spokes, crisp reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnk6ERwOypn5N47Q0EybUm7YaM5K86yyz-oil2-Y_cQND67YxyFLtUZneZ_Ovxjtt_MVGPNtT_ZyQsrhk2voam9mKrK5dMNEW-R1QNQbMg6MF-nD3kPBPQJ9MGW4ZnvcAF3zeoEcN5R5rWXQDZca3Ldq3ACbJEo_dVgrYiCqFfqgZUgQQ2IVDEyPsrjzmsOk8IZi0GXaO9pZVqr6dvtLxQnJp2gww4opXA-lbnmKk"/>
+</div>
+<div class="flex items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-space-lg">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">local_gas_station</span> 80L</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">settings</span> Manual</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">group</span> 6 People</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex flex-col">
+<div class="flex items-baseline">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">$80.00</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">/ day</span>
+</div>
+</div>
+<a class="px-5 py-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary font-label-md text-label-md font-semibold transition-all duration-200 active:scale-95 shadow-sm" data-path="cars-catalog" href="#">
+              Rent Now
+            </a>
+</div>
+</article>
+<!-- Rec 6: MG ZX Excite -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold group-hover:text-primary transition-colors">MG ZX Excite</h3>
+<p class="font-label-sm text-label-sm text-outline font-medium">Hatchback</p>
+</div>
+<button aria-label="Add to wishlist" class="wishlist-btn text-tertiary transition-transform active:scale-125" onclick="this.classList.toggle('text-tertiary'); this.classList.toggle('text-outline');" type="button">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="my-space-lg h-36 flex items-center justify-center relative overflow-hidden">
+<img class="max-h-full w-full object-contain transform group-hover:scale-105 transition-transform duration-300" data-alt="Canary yellow compact city hatchback side angle view on clear studio backdrop, contemporary styling and crisp rim contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVqN-kL6Y1ec4mFpBBIgxQNRg8_Df7x9lgEN0DFN-ULfB2SMqK3YNV-tJDy2Zn7hrclGNOXu8-sBnjQt-JU-IoKt_tp54Ja_TocllgFFVxp_Adu_E_D6Jig42XUyOMm5P-b-qzLvvCgwnujyhmnAcxYrCZEOGmivQt9jUqWap31SXYO6DSjDW0zCgPpUapQ7AJcVNr_REEkRidZJyzz-PXVITa0vqL6STJAF7oFk8"/>
+</div>
+<div class="flex items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-space-lg">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">local_gas_station</span> 90L</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">settings</span> Manual</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">group</span> 4 People</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex flex-col">
+<div class="flex items-baseline">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">$74.00</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">/ day</span>
+</div>
+</div>
+<a class="px-5 py-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary font-label-md text-label-md font-semibold transition-all duration-200 active:scale-95 shadow-sm" data-path="cars-catalog" href="#">
+              Rent Now
+            </a>
+</div>
+</article>
+<!-- Rec 7: BMW M4 Coupe -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold group-hover:text-primary transition-colors">BMW M4 Coupe</h3>
+<p class="font-label-sm text-label-sm text-outline font-medium">Sport</p>
+</div>
+<button aria-label="Add to wishlist" class="wishlist-btn text-outline hover:text-tertiary transition-transform active:scale-125" onclick="this.classList.toggle('text-tertiary'); this.classList.toggle('text-outline');" type="button">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+</button>
+</div>
+<div class="my-space-lg h-36 flex items-center justify-center relative overflow-hidden">
+<img class="max-h-full w-full object-contain transform group-hover:scale-105 transition-transform duration-300" data-alt="Isle of Man green German performance coupe with carbon fiber roof side view isolated on pure transparent background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApTkbikZaGbhZSvEhOVh80inMuu70a67nlye7V85lXo2VMlkdFdqei0yq-MjowqdHSBTNESzPhW9liy6CujdTlV6l10v_5G7Hu8pJBknEi1Xqus1wkqHrwx3Zw1fjhjX2rm05-s1vWnEAYlLnmN2fDLLTqWgWwXjHoNc_BKk6nkhItTQW6vePXa4TKOAqFl1FdgnAwztHonj5irxc-LKEcUO06A00msHPMcM9z-JM"/>
+</div>
+<div class="flex items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-space-lg">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">local_gas_station</span> 59L</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">settings</span> Manual</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">group</span> 4 People</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex flex-col">
+<div class="flex items-baseline">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">$96.00</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">/ day</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline line-through">$105.00</span>
+</div>
+<a class="px-5 py-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary font-label-md text-label-md font-semibold transition-all duration-200 active:scale-95 shadow-sm" data-path="cars-catalog" href="#">
+              Rent Now
+            </a>
+</div>
+</article>
+<!-- Rec 8: Tesla Model 3 -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold group-hover:text-primary transition-colors">Tesla Model 3</h3>
+<p class="font-label-sm text-label-sm text-outline font-medium">Electric</p>
+</div>
+<button aria-label="Add to wishlist" class="wishlist-btn text-tertiary transition-transform active:scale-125" onclick="this.classList.toggle('text-tertiary'); this.classList.toggle('text-outline');" type="button">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="my-space-lg h-36 flex items-center justify-center relative overflow-hidden">
+<img class="max-h-full w-full object-contain transform group-hover:scale-105 transition-transform duration-300" data-alt="Deep ocean blue all-electric minimalist fastback sedan side profile with black aero wheels on transparent studio surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByWAOe2ChLqjx5N8OtXukBfSs4CPWbaA9vkNRYzKAwaGLSTJcfP7Bl8TcQ_4VrHNvGZ28zePLNM7Lcl_kV0w1bVesDJPgCKMDRP8xNKnTKJrW86xVv-C7lWtBfViVfp3P_itO4jMuY0uU2jU0JW0hz6ETaoQIN8oowM_7BP0zqZuJBPl3QWqNVvTEcnY0XPk2H6i9L4zh3KXLAbnsmAe1voELMsfC5R9n3XoElWMc"/>
+</div>
+<div class="flex items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-space-lg">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">bolt</span> 75kWh</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">settings</span> Electric</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-outline">group</span> 5 People</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex flex-col">
+<div class="flex items-baseline">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">$88.00</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">/ day</span>
+</div>
+</div>
+<a class="px-5 py-2.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary font-label-md text-label-md font-semibold transition-all duration-200 active:scale-95 shadow-sm" data-path="cars-catalog" href="#">
+              Rent Now
+            </a>
+</div>
+</article>
+</div>
+<!-- Bottom Interactive Pagination CTA -->
+<div class="relative flex flex-col sm:flex-row items-center justify-between w-full pt-space-lg pb-space-sm gap-space-md">
+<div class="hidden sm:flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">All vehicles include full comprehensive insurance &amp; 24/7 roadside rescue</p>
+</div>
+<div class="flex items-center gap-space-md mx-auto sm:mx-0">
+<a class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary font-label-md text-label-md font-bold shadow-md hover:shadow-xl transition-all duration-200 active:scale-95" data-path="cars-catalog" href="#">
+            Show More Car
+            <span class="material-symbols-outlined text-[20px]">expand_more</span>
+</a>
+<span class="font-label-sm text-label-sm px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface font-bold tracking-tight">
+            120 Cars Available
+          </span>
+</div>
+</div>
+</section>
+<!-- Trust & Quality Guarantee Banner -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm border-0 grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[28px]">verified_user</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold">Safe &amp; Clean Fleet</h4>
+<p class="font-body-sm text-body-sm text-outline">150-point safety inspection before every hand-over</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[28px]">payments</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold">Zero Hidden Fees</h4>
+<p class="font-body-sm text-body-sm text-outline">Transparent rate calculation with standard taxes included</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[28px]">support_agent</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold">24/7 Roadside Concierge</h4>
+<p class="font-body-sm text-body-sm text-outline">Instant technician dispatch &amp; multilingual customer support</p>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  // Micro-interaction: Swap Pick-up and Drop-off values smoothly
+  document.getElementById('swap-locations-btn')?.addEventListener('click', function() {
+    const pickupLoc = document.getElementById('pickup-loc');
+    const dropoffLoc = document.getElementById('dropoff-loc');
+    const pickupDate = document.getElementById('pickup-date');
+    const dropoffDate = document.getElementById('dropoff-date');
+    const pickupTime = document.getElementById('pickup-time');
+    const dropoffTime = document.getElementById('dropoff-time');
+
+    if (pickupLoc && dropoffLoc) {
+      const tempLoc = pickupLoc.value;
+      pickupLoc.value = dropoffLoc.value;
+      dropoffLoc.value = tempLoc;
+    }
+
+    if (pickupDate && dropoffDate) {
+      const tempDate = pickupDate.value;
+      pickupDate.value = dropoffDate.value;
+      dropoffDate.value = tempDate;
+    }
+
+    if (pickupTime && dropoffTime) {
+      const tempTime = pickupTime.value;
+      pickupTime.value = dropoffTime.value;
+      dropoffTime.value = tempTime;
+    }
+
+    // Micro rotation feedback
+    this.classList.add('rotate-180');
+    setTimeout(() => {
+      this.classList.remove('rotate-180');
+    }, 300);
+  });
+</script></main><footer class="w-full bg-surface-container-lowest pt-space-xl pb-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Morent Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDWeKIajgqQRKxRVGawNAaQly3wt_ON2CbuoXjJxkeX8iqEUmcOZ4cgzG57IMAn015JIi9NIgnWW7a8YQ0AlJdoOL0mMBv0b44EBYJ_XJHrfSXCq8ZYzgDyMgUgikIWxEAsak6WNxKhhV8U6qgvJzMbZJkgMTuYyyvMEoaxY5OHkY5pcq1KAErRudOPNY0UIVKFqEM8tWV5qlffup9m0GIpz1hFTjnYb0HJ5CwQclA"/><span class="font-headline-lg text-headline-lg text-primary tracking-tight">MORENT</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Our vision is to provide convenience and help increase your sales business.</p></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-md text-headline-md text-on-surface">About</h3><ul class="flex flex-col gap-space-xs"><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">How it works</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Featured</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Partnership</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Business Relation</li></ul></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-md text-headline-md text-on-surface">Community</h3><ul class="flex flex-col gap-space-xs"><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Events</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Blog</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Podcast</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Invite a friend</li></ul></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-md text-headline-md text-on-surface">Socials</h3><ul class="flex flex-col gap-space-xs"><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Discord</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Instagram</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Twitter</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Facebook</li></ul></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md"><p class="font-label-md text-label-md text-on-surface font-semibold">©2024 MORENT. All rights reserved</p><div class="flex items-center gap-space-xl"><a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors font-semibold" href="#">Privacy &amp; Policy</a><a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors font-semibold" href="#">Terms &amp; Condition</a></div></div></div></footer></body></html>

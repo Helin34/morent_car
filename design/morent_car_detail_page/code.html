@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-tint":"#1d52d8","tertiary-fixed":"#ffdad3","surface-container-low":"#f1f3ff","outline":"#747686","on-error-container":"#93000a","primary-fixed-dim":"#b6c4ff","tertiary":"#aa1900","surface-container":"#e8eeff","on-secondary":"#ffffff","on-surface":"#161c27","on-primary":"#ffffff","surface-variant":"#dde2f3","surface-dim":"#d4daea","on-primary-container":"#f0f1ff","tertiary-fixed-dim":"#ffb4a5","surface-container-highest":"#dde2f3","primary-fixed":"#dce1ff","inverse-surface":"#2a303d","inverse-on-surface":"#ecf0ff","on-tertiary-fixed-variant":"#8e1300","secondary-container":"#55a7ff","inverse-primary":"#b6c4ff","on-secondary-fixed-variant":"#004880","secondary":"#0060a8","on-tertiary-container":"#ffefeb","outline-variant":"#c4c5d7","surface-bright":"#f9f9ff","surface-container-high":"#e3e8f9","on-tertiary-fixed":"#3e0400","on-background":"#161c27","secondary-fixed":"#d3e4ff","on-secondary-container":"#003b6a","secondary-fixed-dim":"#a1c9ff","primary":"#0848d0","on-surface-variant":"#434654","primary-container":"#3563e9","surface-container-lowest":"#ffffff","on-error":"#ffffff","surface":"#f9f9ff","on-primary-fixed-variant":"#003ab1","tertiary-container":"#d62504","on-tertiary":"#ffffff","on-primary-fixed":"#00164f","error-container":"#ffdad6","background":"#f9f9ff","error":"#ba1a1a","on-secondary-fixed":"#001c38"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"2rem","space-xs":"0.25rem","space-lg":"1.5rem",margin:"2rem","margin-mobile":"1rem","space-md":"1rem","space-sm":"0.5rem","gutter-mobile":"1rem",gutter:"1.5rem"},fontFamily:{"spec-code":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"]},fontSize:{"spec-code":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"700"}],"headline-xl-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"display-hero-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-md":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-lg":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"700"}],"display-hero":["40px",{lineHeight:"48px",letterSpacing:"-0.03em",fontWeight:"700"}],"label-md":["14px",{lineHeight:"20px",fontWeight:"600"}],"label-sm":["12px",{lineHeight:"16px",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg shrink-0"><a class="flex items-center gap-space-sm" href="#"><img alt="Morent Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDWeKIajgqQRKxRVGawNAaQly3wt_ON2CbuoXjJxkeX8iqEUmcOZ4cgzG57IMAn015JIi9NIgnWW7a8YQ0AlJdoOL0mMBv0b44EBYJ_XJHrfSXCq8ZYzgDyMgUgikIWxEAsak6WNxKhhV8U6qgvJzMbZJkgMTuYyyvMEoaxY5OHkY5pcq1KAErRudOPNY0UIVKFqEM8tWV5qlffup9m0GIpz1hFTjnYb0HJ5CwQclA"/><span class="font-headline-lg text-headline-lg text-primary tracking-tight">MORENT</span></a></div><div class="flex-1 max-w-xl mx-auto hidden lg:flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-low"><span class="material-symbols-outlined text-outline">search</span><input class="w-full bg-transparent border-0 outline-none text-on-surface placeholder:text-outline font-body-md text-body-md" placeholder="Search something here" type="text"/><button class="p-1.5 rounded-full hover:bg-surface-container text-outline hover:text-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button></div><nav class="hidden xl:flex items-center gap-space-md shrink-0" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-lg px-3 py-1.5"><a aria-current="page" class="transition-colors bg-primary-container text-on-primary-container font-label-md rounded-lg px-3 py-1.5" data-path="home" href="#">Home</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-3 py-1.5 transition-colors" data-path="cars-catalog" href="#">Cars Catalog</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-3 py-1.5 transition-colors" data-path="rental-deals" href="#">Rental Deals</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-3 py-1.5 transition-colors" data-path="about" href="#">About</a></nav><div class="flex items-center gap-space-sm shrink-0"><button aria-label="Favorites" class="relative w-10 h-10 rounded-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">favorite</span><span class="absolute top-1 right-1 w-2.5 h-2.5 bg-primary rounded-full"></span></button><button aria-label="Notifications" class="relative w-10 h-10 rounded-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2.5 h-2.5 bg-tertiary rounded-full"></span></button><button aria-label="Settings" class="w-10 h-10 rounded-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button><div class="flex items-center gap-space-xs pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABiTL1lrKEzpRItF6mhdQOLS5p9WKFuiLbYzr19mfZu0QdVQfoMlLe3JosxSjZ7UP0wUG-z_4uDzm-l7w19vH10hkJQhtgF4w2OCos8hJpcv-zW4dwVrHqG-BGbz8s5mNp8-khYKdA10nbr0CbxkZVL78tfFxNzy0eUl2GeIUue_ePTecvtEC4K0SNZM4nTjtdHVRpVVGUmWWCbmxvxsUf-pzLK35-Ug-P_RiY1SI"/><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin py-6 flex flex-col gap-8">
+<!-- 1. Breadcrumbs & Status Bar -->
+<section class="flex flex-wrap items-center justify-between gap-4">
+<nav aria-label="Breadcrumb" class="flex items-center gap-2">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[18px]">home</span>
+<span>Home</span>
+</a>
+<span class="text-outline-variant font-label-md text-label-md">/</span>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Cars Catalog</a>
+<span class="text-outline-variant font-label-md text-label-md">/</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Sport</span>
+<span class="text-outline-variant font-label-md text-label-md">/</span>
+<span class="font-label-md text-label-md text-primary font-bold">Nissan GT - R (2024 Edition)</span>
+</nav>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-primary font-spec-code text-spec-code">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          AVAILABLE IN METRO AREA
+        </span>
+<button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-colors shadow-sm font-label-sm text-label-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">share</span>
+<span>Share</span>
+</button>
+</div>
+</section>
+<!-- 2. Main Top Section: 2 Columns Gallery & Overview -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Hero Banner + Thumbnails -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<!-- Interactive Hero Showcase Card -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary via-primary-container to-surface-tint text-on-primary p-6 md:p-8 shadow-xl min-h-[360px] md:min-h-[420px] flex flex-col justify-between" id="hero-display-card">
+<div class="relative z-10 max-w-md">
+<span class="inline-block px-3 py-1 rounded-full bg-on-primary/15 backdrop-blur-md font-spec-code text-spec-code tracking-wider uppercase mb-3">
+              Performance Flagship
+            </span>
+<h1 class="font-display-hero md:text-display-hero text-[28px] leading-tight font-bold tracking-tight mb-3">
+              Sports car with the best design and acceleration
+            </h1>
+<p class="font-body-md text-body-md text-on-primary/80 line-clamp-2 max-w-sm">
+              Safety, dynamic comfort, and extreme track performance engineered into an icon of Japanese precision.
+            </p>
+</div>
+<!-- Car Main Display Image -->
+<div class="relative w-full h-56 md:h-64 mt-4 flex items-center justify-center">
+<img alt="Nissan GT-R Primary Exterior View" class="w-full h-full object-contain filter drop-shadow-[0_20px_30px_rgba(0,10,40,0.45)] transition-all duration-300" data-alt="Photorealistic side-front three-quarter view of a metallic gunmetal blue 2024 Nissan GT-R Nismo sports car parked dynamically under clean studio lighting with carbon fiber aero splitters, gold Brembo brake calipers, and glossy high-end reflections against a subtle studio gradient background." id="main-view-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx5rUSF-OIa11iiuDWxvOt1FPj_Fj3sjd2cQOca9pUBXkzsrmTfGT1YeulhSjBmmFi1AqLAV3GkimnqsCnplIt_xDcZlZ7EuW_V9YSs-d_LQKF-3FK8t4U9_x92ePPGhZQZrcUqmO_6X_i3TbHw3Dfsmj_g9ULqnJGvpqPJin-hV3gHBkLyGCugAsRwNhp73r_zaoWGtsCzCX8N8V0vhWYb_xvSDB4et4o2-WCloo"/>
+</div>
+<!-- Ambient Decorative Glow -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-10 top-0 w-64 h-64 rounded-full bg-surface-container-lowest/10 blur-2xl pointer-events-none"></div>
+</div>
+<!-- Thumbnail Gallery Strip -->
+<div class="grid grid-cols-4 gap-3 md:gap-4">
+<!-- Thumb 1 -->
+<button class="gallery-thumb group relative rounded-xl bg-surface-container-lowest p-2 shadow-sm transition-all duration-200 ring-2 ring-primary" onclick="selectGalleryImage(0, this)" type="button">
+<div class="w-full h-16 md:h-20 rounded-lg overflow-hidden bg-surface-container-low flex items-center justify-center">
+<img alt="Front angle thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Sharp angled front quarter shot of blue Nissan GTR sports car headlights illuminated in daytime with aggressive aerodynamic front bumper and NISMO red accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJNyEouH2tazMiY29aXNvPU4lUvOSAf3ChIz5WauP9y-Hgm_yj4fa_dxsfiGAiu9wgkMZz5xtpvHbHHgCm9aYFwZ5pPbMZdxWLkAOgV-TVKMf2YNm4BbrhAWe77-QCSXLOjoBDzIUYUpGEuu9dzEYISU934kAhddfWhWBBj-c5MEXU_XfYM599bqopTG3-Nq6mxglrm67E7c5dylM9_fvWwT4-6-Tleo5aQYOH0Co"/>
+</div>
+<span class="block mt-1 text-center font-spec-code text-spec-code text-primary uppercase">Front View</span>
+</button>
+<!-- Thumb 2 -->
+<button class="gallery-thumb group relative rounded-xl bg-surface-container-lowest p-2 shadow-sm transition-all duration-200 ring-0 hover:shadow-md" onclick="selectGalleryImage(1, this)" type="button">
+<div class="w-full h-16 md:h-20 rounded-lg overflow-hidden bg-surface-container-low flex items-center justify-center">
+<img alt="Interior cockpit thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Luxury interior cockpit view of 2024 Nissan GT-R featuring alcantara wrapped multifunction steering wheel, digital dashboard gauges, high-tech carbon fiber center console and paddle shifters in ambient blue interior lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSrt_s5h2vWw4gP_RMWZi7tSOBRQbcl2NOsIQrWFNaIW_1tUkRKs5w2g7iEzryDq1NcL9V9-KU-WSRNiyYe9X5eLJR1egjnW67Zmc0e3YqQhrDHPDW6cWOzRFKpYaTkXXNP2kJeE-etemrtCqpT8MMvstzwxM3-OgrmgofLPqx_mnod8xMA9s-w53HgFsZCiJYdmQosYyeFvCBQP6s2IdA9u2oZnIs7OpExOa6bRY"/>
+</div>
+<span class="block mt-1 text-center font-spec-code text-spec-code text-on-surface-variant group-hover:text-primary uppercase">Interior</span>
+</button>
+<!-- Thumb 3 -->
+<button class="gallery-thumb group relative rounded-xl bg-surface-container-lowest p-2 shadow-sm transition-all duration-200 ring-0 hover:shadow-md" onclick="selectGalleryImage(2, this)" type="button">
+<div class="w-full h-16 md:h-20 rounded-lg overflow-hidden bg-surface-container-low flex items-center justify-center">
+<img alt="Recaro bucket seats thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Detailed close-up macro view of Recaro sport racing bucket seats with perforated black leather, deep bolsters, red contrast stitch patterns and embossed NISMO emblem." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXdli9GubBQBwWUdkEo-v1tS9O1l2ef5C9rgGNTgOar2MnPgvGgC_jDrTCiN-emY8d_ZHRLYCD7GQxep74Rf8IKWmQ2ZIBv6VKLDS6l6WCd2prLa1FPfq-H_qpoyKL3ZuR5X1GoBENS4mB4-cPdErl5Q0BtwZECe8X4m6OQeUkt4AGSUKYx6YcaMufFZxafgvPxIFjK_nc1dxkNXxkUkUrhJmdjH6h-pKHZkHdbhs"/>
+</div>
+<span class="block mt-1 text-center font-spec-code text-spec-code text-on-surface-variant group-hover:text-primary uppercase">Cockpit</span>
+</button>
+<!-- Thumb 4 -->
+<button class="gallery-thumb group relative rounded-xl bg-surface-container-lowest p-2 shadow-sm transition-all duration-200 ring-0 hover:shadow-md" onclick="selectGalleryImage(3, this)" type="button">
+<div class="w-full h-16 md:h-20 rounded-lg overflow-hidden bg-surface-container-low flex items-center justify-center">
+<img alt="Rear diffuser &amp; exhaust thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Rear angle high-contrast view of Nissan GT-R twin ring LED taillights glowing brightly, carbon fiber rear wing spoiler, massive rear aerodynamic diffuser and titanium quad exhaust tips." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJMOtf2iLz_FE4x7vVk6rB9lUTYMQseLznbVxoffWyDYNU5ZsI5btekFblqXlvY2IaQyxkK8_eWTzo8m1zLi_vSQvQl8uN7SI_HwFrOoAm1FMwj0OXnpFjthAEpB7Uo5BfiRdp8or5w5b2UYDPkvx7D2YcjKgjYkamlTVYiRpApkfxDtS1QxCwpDa-ssPtTna_yPAI1DLbatHuy-ap5zZZR0w5ZIgDbvv8E1EICCg"/>
+</div>
+<span class="block mt-1 text-center font-spec-code text-spec-code text-on-surface-variant group-hover:text-primary uppercase">Rear Aerokit</span>
+</button>
+</div>
+</div>
+<!-- Right Column: Vehicle Overview & Technical Specs -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div class="rounded-xl bg-surface-container-lowest p-6 md:p-8 shadow-sm flex flex-col justify-between">
+<!-- Top Row: Title, Fav, Status -->
+<div>
+<div class="flex items-start justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container font-spec-code text-spec-code text-primary uppercase">
+                    Track Edition
+                  </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified Vehicle
+                  </span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">
+                  Nissan GT - R
+                </h2>
+</div>
+<!-- Favorite Toggle Button -->
+<button aria-label="Add to favorites" class="w-11 h-11 rounded-full bg-surface-container-low hover:bg-surface-container text-tertiary-container flex items-center justify-center transition-transform active:scale-95" id="fav-btn" onclick="toggleFavorite(this)" type="button">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<!-- Reviews and Rating Row -->
+<div class="flex items-center gap-3 mt-3">
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">4.9</span>
+<span class="font-body-md text-body-md text-on-surface-variant">(440+ Reviews)</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">98% Satisfaction</span>
+</div>
+<!-- Description -->
+<p class="font-body-md text-body-md text-on-surface-variant mt-4 leading-relaxed">
+              NISMO has become the embodiment of Nissan's outstanding performance, inspired by the most unforgiving proving ground, the 'race track'. Experience unmatched twin-turbo power with precision all-wheel control.
+            </p>
+<!-- Technical Specification 2x4 Metric Grid -->
+<div class="grid grid-cols-2 gap-x-6 gap-y-4 my-6 py-5 bg-surface-container-low/60 rounded-xl px-5">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-outline">directions_car</span>
+                  Type Car
+                </span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Sport Coupe</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-outline">group</span>
+                  Capacity
+                </span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">2 Person</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-outline">tune</span>
+                  Steering
+                </span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Dual-Clutch</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-outline">local_gas_station</span>
+                  Gasoline
+                </span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">70L / 18.5 gal</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-outline">speed</span>
+                  Horsepower
+                </span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">565 HP @ 6.8k</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-outline">timer</span>
+                  0-60 mph
+                </span>
+<span class="font-label-md text-label-md font-bold text-primary">2.9 sec</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-outline">flight_takeoff</span>
+                  Top Speed
+                </span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">196 mph (315 km/h)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-outline">security</span>
+                  Insurance
+                </span>
+<span class="font-label-md text-label-md font-semibold text-primary">Full Covered</span>
+</div>
+</div>
+</div>
+<!-- Bottom Price & Instant CTA -->
+<div class="pt-4 flex items-center justify-between gap-4">
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold">$80.00</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ day</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline line-through">$100.00</span>
+<span class="font-spec-code text-spec-code text-tertiary font-bold">20% OFF</span>
+<span class="text-on-surface-variant text-[11px]">Taxes included</span>
+</div>
+</div>
+<button class="px-6 py-3.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all duration-200 shadow-md hover:shadow-lg flex items-center gap-2 group" onclick="scrollToBooking()" type="button">
+<span>Book Instantly</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_downward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Reservation & Booking Widget Panel (Interactive Full-Width Card) -->
+<section class="scroll-mt-24 rounded-xl bg-surface-container-lowest p-6 md:p-8 shadow-sm" id="reservation-widget-section">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-spec-code text-spec-code flex items-center justify-center">1</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Complete Your Reservation</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Please enter your pick-up and drop-off schedule. Instant lock-in with free cancellation.
+          </p>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low">
+<span class="font-spec-code text-spec-code text-on-surface-variant">STEP PROGRESS</span>
+<span class="px-2 py-0.5 rounded-full bg-primary text-on-primary font-spec-code text-spec-code font-bold">Step 1 of 2</span>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+<!-- Booking Pickers Form (Left 8 Cols) -->
+<div class="xl:col-span-8 flex flex-col gap-6">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 relative">
+<!-- Pick-Up Card -->
+<div class="p-5 rounded-xl bg-surface-container-low flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="w-4 h-4 rounded-full bg-primary ring-4 ring-primary/20"></span>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold">Pick - Up</h4>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<!-- Location -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Location</label>
+<div class="relative">
+<select class="w-full h-11 px-3 pr-8 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm appearance-none outline-none focus:ring-2 focus:ring-primary shadow-sm cursor-pointer">
+<option selected="">Semarang Downtown</option>
+<option>Jakarta Airport Terminal 3</option>
+<option>Surabaya City Hub</option>
+<option>Bali Ngurah Rai VIP</option>
+</select>
+<span class="material-symbols-outlined text-[18px] text-outline absolute right-2.5 top-3 pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Date -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Date</label>
+<div class="relative">
+<input class="w-full h-11 px-3 pr-8 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm outline-none focus:ring-2 focus:ring-primary shadow-sm cursor-pointer" readonly="" type="text" value="Jul 24, 2024"/>
+<span class="material-symbols-outlined text-[18px] text-outline absolute right-2.5 top-3 pointer-events-none">calendar_today</span>
+</div>
+</div>
+<!-- Time -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Time</label>
+<div class="relative">
+<select class="w-full h-11 px-3 pr-8 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm appearance-none outline-none focus:ring-2 focus:ring-primary shadow-sm cursor-pointer">
+<option selected="">10:00 AM</option>
+<option>12:00 PM</option>
+<option>02:00 PM</option>
+<option>04:00 PM</option>
+</select>
+<span class="material-symbols-outlined text-[18px] text-outline absolute right-2.5 top-3 pointer-events-none">schedule</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Drop-Off Card -->
+<div class="p-5 rounded-xl bg-surface-container-low flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="w-4 h-4 rounded-full bg-secondary ring-4 ring-secondary/20"></span>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold">Drop - Off</h4>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<!-- Location -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Location</label>
+<div class="relative">
+<select class="w-full h-11 px-3 pr-8 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm appearance-none outline-none focus:ring-2 focus:ring-primary shadow-sm cursor-pointer">
+<option selected="">Semarang Downtown</option>
+<option>Jakarta Airport Terminal 3</option>
+<option>Surabaya City Hub</option>
+<option>Bali Ngurah Rai VIP</option>
+</select>
+<span class="material-symbols-outlined text-[18px] text-outline absolute right-2.5 top-3 pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Date -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Date</label>
+<div class="relative">
+<input class="w-full h-11 px-3 pr-8 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm outline-none focus:ring-2 focus:ring-primary shadow-sm cursor-pointer" readonly="" type="text" value="Jul 28, 2024"/>
+<span class="material-symbols-outlined text-[18px] text-outline absolute right-2.5 top-3 pointer-events-none">calendar_today</span>
+</div>
+</div>
+<!-- Time -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Time</label>
+<div class="relative">
+<select class="w-full h-11 px-3 pr-8 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm appearance-none outline-none focus:ring-2 focus:ring-primary shadow-sm cursor-pointer">
+<option selected="">10:00 AM</option>
+<option>12:00 PM</option>
+<option>02:00 PM</option>
+<option>06:00 PM</option>
+</select>
+<span class="material-symbols-outlined text-[18px] text-outline absolute right-2.5 top-3 pointer-events-none">schedule</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Special Requests Textarea -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="rental-notes">
+                Additional Notes &amp; Special Requests (Optional)
+              </label>
+<span class="font-spec-code text-spec-code text-on-surface-variant">Max 250 characters</span>
+</div>
+<textarea class="w-full p-4 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md outline-none focus:ring-2 focus:ring-primary transition-all" id="rental-notes" placeholder="e.g., Baby seat request, track gear luggage space, airport VIP curbside delivery instruction..." rows="3"></textarea>
+</div>
+<!-- Trust & Value Badges -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+<div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low/50">
+<span class="material-symbols-outlined text-primary text-[22px]">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Free Cancellation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Within 24h before pick-up</span>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low/50">
+<span class="material-symbols-outlined text-primary text-[22px]">bolt</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Instant Booking</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">No waiting for approvals</span>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low/50">
+<span class="material-symbols-outlined text-primary text-[22px]">price_check</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Best Rate Guarantee</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direct rental fleet price</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Price Breakdown Box (Right 4 Cols) -->
+<div class="xl:col-span-4 rounded-xl bg-surface-container-low p-6 flex flex-col justify-between gap-6">
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold mb-1">Rental Summary</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Prices may change based on extra distance &amp; coverage selection.</p>
+<div class="flex flex-col gap-3 py-3 font-body-md text-body-md">
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>4 Days Rental ($80.00 × 4)</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">$320.00</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span>Collision Damage Waiver</span>
+<span class="material-symbols-outlined text-[16px] text-outline cursor-help" title="Zero deductible CDW included">info</span>
+</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Included ($0.00)</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Service &amp; Cleanliness Fee</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">$25.00</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Refundable Deposit</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">$200.00</span>
+</div>
+</div>
+<!-- Promo Input -->
+<div class="flex items-center gap-2 mt-4 p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-outline text-[20px] ml-1">confirmation_number</span>
+<input class="bg-transparent text-on-surface placeholder:text-outline font-body-sm text-body-sm outline-none flex-1" placeholder="Promo / Voucher Code" type="text"/>
+<button class="px-3 py-1.5 rounded bg-surface-container hover:bg-surface-variant text-primary font-label-sm text-label-sm font-semibold transition-colors" type="button">Apply</button>
+</div>
+<!-- Total Estimated Calculation -->
+<div class="mt-6 pt-5 bg-surface-container-lowest/80 rounded-xl p-4 flex flex-col gap-1">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">Total Rental Price</span>
+<span class="font-headline-xl text-headline-xl text-primary font-extrabold">$345.00</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Overall price includes tax &amp; standard service fee.</span>
+</div>
+</div>
+<!-- Reserve Now Button -->
+<button class="w-full py-4 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-bold tracking-wide transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-2" id="reserve-submit-btn" onclick="triggerBookingConfirm()" type="button">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+<span>Reserve Nissan GT - R Now</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 4. Customer Reviews & Ratings Section -->
+<section class="rounded-xl bg-surface-container-lowest p-6 md:p-8 shadow-sm flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Reviews</h2>
+<span class="px-3 py-1 rounded-full bg-primary text-on-primary font-spec-code text-spec-code font-bold">
+            13
+          </span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span>Sort by:</span>
+<button class="font-label-sm text-label-sm text-primary font-bold flex items-center" type="button">
+            Most Recent <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Review List -->
+<div class="flex flex-col gap-6">
+<!-- Reviewer 1: Alex Stanton -->
+<div class="flex flex-col gap-3 pb-6 bg-surface-container-low/40 p-5 rounded-xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3.5">
+<img alt="Alex Stanton Profile Picture" class="w-12 h-12 rounded-full object-cover shadow-sm" data-alt="Modern professional headshot of Alex Stanton, a young Indonesian executive wearing a clean navy blazer with a confident warm smile in high quality lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMzoyVOmhr-14wBE2PYUMSoioI4tnQ8RqUs_zbYRjv8cgdfLjAT0QMwnjkmOuDUD1xp4h2GrEmVqd-fYm9_B_hBcOsaWGx5028tDUz4fYYnkJD0WFRtsI1aaJJOivo5PEadJWoAlRYzTQ_dF6a4G1ZhgbaM7kdRJ3NfUX_Zcd2-3D2y5vkGlmaSt-Is_4zw8lgLPik6iY1EimHTanSTCGMZI3fMyLh3uY0MHwYYtE"/>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold">Alex Stanton</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">CEO at Bukalapak</p>
+</div>
+</div>
+<div class="flex flex-col sm:items-end">
+<span class="font-label-sm text-label-sm text-outline">21 July 2024</span>
+<div class="flex items-center text-amber-500 mt-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed pl-0 sm:pl-16">
+            We are very happy with the service from the MORENT app. The GT-R was delivered spotless with full tank gasoline and crisp track tires. The dual-clutch transmission shifts were flawless through hilly routes. Will definitely book again for our executive retreat!
+          </p>
+</div>
+<!-- Reviewer 2: Skylar Dias -->
+<div class="flex flex-col gap-3 bg-surface-container-low/40 p-5 rounded-xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3.5">
+<img alt="Skylar Dias Profile Picture" class="w-12 h-12 rounded-full object-cover shadow-sm" data-alt="Professional portrait photo of Skylar Dias, a female tech marketing director with curly hair and stylish glasses, smiling against a warm creative studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbXFw2Ha0Cw7pfmAe8jHCVC94i0Wns_eFnfKX_eRK5UA_CO9N02BW9eADOJXqWmPbXiIw8WtZIPgtw1c4gjVsPuDJgefOL3iCXICvWlshZhU5eiayZtRH6lN3EKLxyJYqGNiczpE09xUIOPAN0ABkXcr48ApwkJ1L8g1b4vvfpF7Z5ZEs1B25CXAg8j7kw37iL2ICbqpeGcDEsKRksLqQglwVcbj6dtHFngrjGb_c"/>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold">Skylar Dias</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Marketing at Amazon</p>
+</div>
+</div>
+<div class="flex flex-col sm:items-end">
+<span class="font-label-sm text-label-sm text-outline">20 July 2024</span>
+<div class="flex items-center text-amber-500 mt-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed pl-0 sm:pl-16">
+            Renting this sports car was the best decision for my weekend road trip. The twin-turbo exhaust note is addictive and the stability around winding highway corners gives you total confidence. Highly recommended!
+          </p>
+</div>
+</div>
+<!-- Show All Reviews Accordion Trigger -->
+<div class="flex justify-center pt-2">
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-outline hover:text-primary transition-colors font-label-md text-label-md font-semibold" onclick="toggleAllReviews(this)" type="button">
+<span>Show All Reviews (13)</span>
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200">expand_more</span>
+</button>
+</div>
+</section>
+<!-- 5. Recent / Recommended Cars Section -->
+<section class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Recent Cars</h2>
+<span class="text-on-surface-variant font-body-sm text-body-sm hidden sm:inline">(Popular Sport &amp; Luxury Inventory)</span>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline font-bold flex items-center gap-1" href="#">
+<span>View All</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+<!-- 4 Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Rec Card 1: Koenigsegg -->
+<div class="rounded-xl bg-surface-container-lowest p-5 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold">Koenigsegg Regera</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hypercar</p>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-tertiary-container hover:scale-110 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="w-full h-36 my-6 flex items-center justify-center overflow-hidden">
+<img alt="Koenigsegg" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" data-alt="Side profile perspective of luxury metallic blue Koenigsegg hypercar sports auto on crisp clean white backdrop with active rear spoiler and aerodynamic carbon curves." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFV1bfjJ1vXZNpSKrwxXERdp9VjCcpg5AGYvjcaupRj-wmPxBVtjM_NSdyWXusLcy-isG39Vtaz9cvcwVNR4lbZVGJXpDd-SB9rzUT4dXEqX0tftZLRNt-lCYoM_Wd1aOaLYrnwetIQd2gPyqYFQHH6DfHSOK-82S58lBq-WQ62_TODeSXUOpFsxGZ1ztu2BOKv603Hv0Ne_qNcQ9QlkYoe-nfxO-NdaytYp3ZTxU"/>
+</div>
+<!-- Specs Pill Row -->
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm py-2">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">local_gas_station</span>
+<span>90L</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">tune</span>
+<span>Manual</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">group</span>
+<span>2 People</span>
+</div>
+</div>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<span class="font-headline-md text-headline-md text-on-surface font-extrabold">$99.00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ day</span>
+</div>
+<button class="px-4 py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold transition-colors" type="button">
+              Rent Now
+            </button>
+</div>
+</div>
+<!-- Rec Card 2: Porsche 911 Carrera -->
+<div class="rounded-xl bg-surface-container-lowest p-5 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold">Porsche 911 Carrera</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Coupe</p>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:text-tertiary-container hover:scale-110 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="w-full h-36 my-6 flex items-center justify-center overflow-hidden">
+<img alt="Porsche 911 Carrera" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" data-alt="Pristine studio photograph of modern Porsche 911 Carrera in chalk grey color, showing aggressive stance, sleek LED strip taillights and twin dual sport exhausts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBNMRD1NEQVkxXlHg8Y9QAVBj0NujckGZ1IrGMptR9E2adrdSg_VwkcuKA8keHs_fx2Exna59Y1FASryTUU_jmQDpLx09r2Bxsf5bnZN9_lL8IFLsEewFC2IzFMpNiL9N_E9uouJRKt-9K1yviuj-N40nW-_HpfNiWUyQXRiryRiT4hUkMgMggtJj80hW8UmV9Ecp7WuU-ZQrJkHnavFIk59SUBMKgaKm1Mj2N1ds"/>
+</div>
+<!-- Specs Pill Row -->
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm py-2">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">local_gas_station</span>
+<span>64L</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">tune</span>
+<span>PDK Auto</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">group</span>
+<span>2 People</span>
+</div>
+</div>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<span class="font-headline-md text-headline-md text-on-surface font-extrabold">$88.00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ day</span>
+</div>
+<button class="px-4 py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold transition-colors" type="button">
+              Rent Now
+            </button>
+</div>
+</div>
+<!-- Rec Card 3: Rolls - Royce -->
+<div class="rounded-xl bg-surface-container-lowest p-5 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold">Rolls - Royce Ghost</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ultra Luxury</p>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:text-tertiary-container hover:scale-110 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="w-full h-36 my-6 flex items-center justify-center overflow-hidden">
+<img alt="Rolls-Royce Ghost" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" data-alt="Side profile luxury studio shot of Rolls Royce Ghost flagship limousine sedan in two-tone obsidian black and silver finish with iconic chrome pantheon grille." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUxnXLSwktjk7aCJE3ctZXUa92i7h3bVSHCmqnF6TUpK3vzHLRKfLvElPE1wuhUg7P29Lo4vyMo3EQ-bTnle-LnfsJwap8QWePrT55ogr-RxVMQjY4sBCDFcI9vY8p-BFyidQWjr9SjQ6LTi_bZwU1_7m5XWMkgoqYXlSGn7idROg366w_nw9ASpA0ajgp6ZTJfJ4IeSyH-e2ERNm-CX66hHmDsHLMWVFpmZJL7B4"/>
+</div>
+<!-- Specs Pill Row -->
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm py-2">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">local_gas_station</span>
+<span>82L</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">tune</span>
+<span>Automatic</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">group</span>
+<span>4 People</span>
+</div>
+</div>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<span class="font-headline-md text-headline-md text-on-surface font-extrabold">$96.00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ day</span>
+</div>
+<button class="px-4 py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold transition-colors" type="button">
+              Rent Now
+            </button>
+</div>
+</div>
+<!-- Rec Card 4: All New Rush -->
+<div class="rounded-xl bg-surface-container-lowest p-5 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold">All New Rush GR</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sport SUV</p>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:text-tertiary-container hover:scale-110 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="w-full h-36 my-6 flex items-center justify-center overflow-hidden">
+<img alt="All New Rush" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" data-alt="Dynamic exterior 3/4 perspective of a white modern compact SUV with sport alloy wheels and roof rack rails under bright modern city daylight studio backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoyFLArW8PCDXMLuW9G5ot71QXBym9Q35h0STLzQqMyTYJ8ig4T4Am4WAwEUFQiuhG5S72g8gQGZD6-UwaVLiqSXnVhE7UHyMCwWXwv1iMzGrSHyTi0Ein-etKqJU0QzRHhZWE7M6swmrZa5cSFw7Q7r3E9ets4kWkerhTNT0kWrXXfUjGFfh4oyGRlQk0LtoOLhiQ0QHfNqpOqLuHwsUOdRi_qbB9J1U6R3HXfcM"/>
+</div>
+<!-- Specs Pill Row -->
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm py-2">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">local_gas_station</span>
+<span>45L</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">tune</span>
+<span>Automatic</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">group</span>
+<span>6 People</span>
+</div>
+</div>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<span class="font-headline-md text-headline-md text-on-surface font-extrabold">$72.00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ day</span>
+</div>
+<button class="px-4 py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold transition-colors" type="button">
+              Rent Now
+            </button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  function selectGalleryImage(index, buttonEl) {
+    document.querySelectorAll('.gallery-thumb').forEach(function(thumb) {
+      thumb.classList.remove('ring-2', 'ring-primary');
+      thumb.classList.add('ring-0');
+      var label = thumb.querySelector('span');
+      if (label) {
+        label.classList.remove('text-primary');
+        label.classList.add('text-on-surface-variant');
+      }
+    });
+
+    buttonEl.classList.remove('ring-0');
+    buttonEl.classList.add('ring-2', 'ring-primary');
+    var activeLabel = buttonEl.querySelector('span');
+    if (activeLabel) {
+      activeLabel.classList.remove('text-on-surface-variant');
+      activeLabel.classList.add('text-primary');
+    }
+
+    var thumbImg = buttonEl.querySelector('img');
+    var mainImg = document.getElementById('main-view-image');
+    if (thumbImg && mainImg) {
+      mainImg.style.opacity = '0.5';
+      mainImg.style.transform = 'scale(0.97)';
+      setTimeout(function() {
+        mainImg.setAttribute('data-alt', thumbImg.getAttribute('data-alt'));
+        mainImg.style.opacity = '1';
+        mainImg.style.transform = 'scale(1)';
+      }, 150);
+    }
+  }
+
+  function toggleFavorite(btn) {
+    var icon = btn.querySelector('.material-symbols-outlined');
+    var isFilled = icon.style.fontVariationSettings && icon.style.fontVariationSettings.indexOf("'FILL' 1") !== -1;
+    
+    if (isFilled) {
+      icon.style.fontVariationSettings = "'FILL' 0";
+      btn.classList.remove('text-tertiary-container');
+      btn.classList.add('text-outline');
+    } else {
+      icon.style.fontVariationSettings = "'FILL' 1";
+      btn.classList.add('text-tertiary-container');
+      btn.classList.remove('text-outline');
+    }
+  }
+
+  function scrollToBooking() {
+    var el = document.getElementById('reservation-widget-section');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      var notes = document.getElementById('rental-notes');
+      if (notes) {
+        notes.focus();
+      }
+    }
+  }
+
+  function triggerBookingConfirm() {
+    var btn = document.getElementById('reserve-submit-btn');
+    if (!btn) return;
+    
+    var origHTML = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>Confirming Reservation...</span>';
+    btn.disabled = true;
+
+    setTimeout(function() {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Reserved Successfully!</span>';
+      btn.classList.remove('bg-primary', 'hover:bg-primary-container');
+      btn.classList.add('bg-secondary');
+
+      setTimeout(function() {
+        btn.innerHTML = origHTML;
+        btn.disabled = false;
+        btn.classList.add('bg-primary', 'hover:bg-primary-container');
+        btn.classList.remove('bg-secondary');
+      }, 3000);
+    }, 900);
+  }
+
+  function toggleAllReviews(btn) {
+    var icon = btn.querySelector('.material-symbols-outlined');
+    var span = btn.querySelector('span');
+    if (!span || !icon) return;
+
+    if (span.innerText.indexOf('Show All') !== -1) {
+      span.innerText = 'Collapse Reviews';
+      icon.classList.add('rotate-180');
+    } else {
+      span.innerText = 'Show All Reviews (13)';
+      icon.classList.remove('rotate-180');
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest pt-space-xl pb-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Morent Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDWeKIajgqQRKxRVGawNAaQly3wt_ON2CbuoXjJxkeX8iqEUmcOZ4cgzG57IMAn015JIi9NIgnWW7a8YQ0AlJdoOL0mMBv0b44EBYJ_XJHrfSXCq8ZYzgDyMgUgikIWxEAsak6WNxKhhV8U6qgvJzMbZJkgMTuYyyvMEoaxY5OHkY5pcq1KAErRudOPNY0UIVKFqEM8tWV5qlffup9m0GIpz1hFTjnYb0HJ5CwQclA"/><span class="font-headline-lg text-headline-lg text-primary tracking-tight">MORENT</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Our vision is to provide convenience and help increase your sales business.</p></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-md text-headline-md text-on-surface">About</h3><ul class="flex flex-col gap-space-xs"><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">How it works</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Featured</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Partnership</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Business Relation</li></ul></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-md text-headline-md text-on-surface">Community</h3><ul class="flex flex-col gap-space-xs"><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Events</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Blog</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Podcast</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Invite a friend</li></ul></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-md text-headline-md text-on-surface">Socials</h3><ul class="flex flex-col gap-space-xs"><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Discord</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Instagram</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Twitter</li><li class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Facebook</li></ul></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md"><p class="font-label-md text-label-md text-on-surface font-semibold">©2024 MORENT. All rights reserved</p><div class="flex items-center gap-space-xl"><a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors font-semibold" href="#">Privacy &amp; Policy</a><a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors font-semibold" href="#">Terms &amp; Condition</a></div></div></div></footer></body></html>

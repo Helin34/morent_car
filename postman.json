@@ -1,0 +1,344 @@
+{
+  "info": {
+    "_postman_id": "morent-car-rental-api-collection",
+    "name": "Morent Car Rental API",
+    "description": "Morent modern araç kiralama platformu Next.js & MongoDB API koleksiyonu. Kimlik doğrulama, araç kataloğu filtreleme/sıralama ve veritabanı tohumlama isteklerini içerir.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "1. Seed & Setup",
+      "item": [
+        {
+          "name": "Veritabanını Tohumla (Seed Database)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/seed",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "seed"]
+            },
+            "description": "MongoDB veritabanını 16 adet Türkçe açıklamalı araç ve demo kullanıcılar ('demo@morent.com' & 'admin@morent.com' / 'Morent123!') ile doldurur."
+          },
+          "response": []
+        },
+        {
+          "name": "Veritabanı Tohumlama Kontrolü (GET Seed)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/seed",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "seed"]
+            },
+            "description": "Tarayıcıdan veya doğrudan GET ile de tetiklenebilen seed kontrol ucu."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "2. Authentication (Kimlik Doğrulama)",
+      "item": [
+        {
+          "name": "Yeni Kullanıcı Kaydı (Register)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Mehmet Kaya\",\n  \"email\": \"mehmet.kaya@example.com\",\n  \"password\": \"Morent123!\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/auth/register",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "auth", "register"]
+            },
+            "description": "Yeni bir kullanıcı oluşturur. Şifreyi bcrypt ile hash'leyerek MongoDB User koleksiyonuna kaydeder."
+          },
+          "response": []
+        },
+        {
+          "name": "NextAuth CSRF Token Al",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/auth/csrf",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "auth", "csrf"]
+            },
+            "description": "NextAuth giriş işlemleri için gerekli olan csrfToken değerini döner."
+          },
+          "response": []
+        },
+        {
+          "name": "NextAuth Sağlayıcıları (Providers)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/auth/providers",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "auth", "providers"]
+            },
+            "description": "Aktif NextAuth sağlayıcılarını (Credentials, Google) listeler."
+          },
+          "response": []
+        },
+        {
+          "name": "Mevcut Oturum Bilgisi (Session)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/auth/session",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "auth", "session"]
+            },
+            "description": "Giriş yapmış kullanıcının oturum JWT ve rol bilgilerini döner."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "3. Cars & Catalog (Araç Kataloğu)",
+      "item": [
+        {
+          "name": "Tüm Araçları Listele (Varsayılan Sayfalama)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cars?page=1&limit=12",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "cars"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "Sayfa numarası"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "description": "Sayfa başına araç sayısı"
+                }
+              ]
+            },
+            "description": "Sistemdeki tüm müsait araçları sayfalama meta verileri ile birlikte getirir."
+          },
+          "response": []
+        },
+        {
+          "name": "Metin ile Araç Arama (Search)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cars?search=nissan",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "cars"],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "nissan",
+                  "description": "Araç adı, marka veya türe göre arama"
+                }
+              ]
+            },
+            "description": "İsme, markaya veya gövde tipine göre büyük/küçük harf duyarsız arama yapar."
+          },
+          "response": []
+        },
+        {
+          "name": "Popüler Araçları Getir (Popular Cars)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cars?popular=true&limit=4",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "cars"],
+              "query": [
+                {
+                  "key": "popular",
+                  "value": "true"
+                },
+                {
+                  "key": "limit",
+                  "value": "4"
+                }
+              ]
+            },
+            "description": "Ana sayfa üst bandı için popüler araçları getirir."
+          },
+          "response": []
+        },
+        {
+          "name": "Tavsiye Edilen Araçları Getir (Recommended Cars)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cars?recommended=true&limit=8",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "cars"],
+              "query": [
+                {
+                  "key": "recommended",
+                  "value": "true"
+                },
+                {
+                  "key": "limit",
+                  "value": "8"
+                }
+              ]
+            },
+            "description": "Ana sayfada önerilen araçlar vitrinini doldurur."
+          },
+          "response": []
+        },
+        {
+          "name": "Gelişmiş Filtreleme (Kategori, Kapasite, Bütçe & Sıralama)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cars?type=Sport,SUV&capacity=2,6&maxPrice=120&steering=Manual&sort=price_asc&page=1&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "cars"],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "Sport,SUV",
+                  "description": "Virgülle ayrılmış gövde tipleri: Sport, SUV, MPV, Sedan, Coupe, Hatchback"
+                },
+                {
+                  "key": "capacity",
+                  "value": "2,6",
+                  "description": "Kişi sayısı: 2, 4, 6, 8 (8 ve üzeri)"
+                },
+                {
+                  "key": "maxPrice",
+                  "value": "120",
+                  "description": "Maksimum günlük ücret ($)"
+                },
+                {
+                  "key": "steering",
+                  "value": "Manual",
+                  "description": "Vites türü: Manual veya Automatic"
+                },
+                {
+                  "key": "sort",
+                  "value": "price_asc",
+                  "description": "Sıralama: price_asc, price_desc, popular, rating, newest"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            },
+            "description": "Katalog sayfasındaki sol yan çubuk filtreleri ve üst sıralama açılır menüsünün kullandığı tam filtreli sorgu."
+          },
+          "response": []
+        },
+        {
+          "name": "Araç Detayı Getir (By Slug: nissan-gt-r)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cars/nissan-gt-r",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "cars", "nissan-gt-r"]
+            },
+            "description": "Belirli bir aracın tüm detaylarını ve benzer araç önerilerini (related) getirir."
+          },
+          "response": []
+        },
+        {
+          "name": "Araç Detayı Getir (By Slug: koenigsegg)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cars/koenigsegg",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "cars", "koenigsegg"]
+            },
+            "description": "Koenigsegg mega otomobilinin detayları ve ilgili öneriler."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "4. Bookings & Reservations (Rezervasyonlar)",
+      "item": [
+        {
+          "name": "Yeni Rezervasyon Oluştur (Create Booking)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"carId\": \"nissan-gt-r\",\n  \"pickupLocation\": \"İstanbul - Kadıköy Rıhtım\",\n  \"pickupDate\": \"2026-11-15\",\n  \"pickupTime\": \"09:00\",\n  \"dropoffLocation\": \"İstanbul - Beşiktaş Meydanı\",\n  \"dropoffDate\": \"2026-11-18\",\n  \"dropoffTime\": \"18:00\",\n  \"notes\": \"Bebek koltuğu ricası\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/bookings",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "bookings"]
+            },
+            "description": "Seçilen araç için rezervasyon oluşturur. Toplam gün ve ücreti hesaplar, ödeme durumunu 'pending' (taslak) olarak kaydeder."
+          },
+          "response": []
+        },
+        {
+          "name": "Rezervasyonları Listele (List Bookings)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/bookings",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "bookings"]
+            },
+            "description": "Mevcut oturuma veya kullanıcıya ait araç rezervasyonlarını getirir."
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
